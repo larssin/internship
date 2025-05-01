@@ -16,18 +16,22 @@ I en terminal kan du køre programmet med:
 node module_3/main.js
 ```
 
-Den skulle gerne printe "Hello World!"
+Den skulle gerne printe "Hello World!" 😀
 
 ### Variabler
 
 #### const
 
 ```javascript
-const textVar = "This is a text"; // Kan IKKE overskrives pga. "const"
-const numericVar = 132342; // Kan IKKE overskrives pga. "const"
+const textVar = "This is a text";
+const numericVar = 132342;
 
 console.log(textVar); // Logs: "This is a text"
 console.log(numericVar); // Logs: 132342
+
+// Vil fejle fordi `textVar` er erklæret med `const`
+textVar = "tried to overwrite"
+
 ```
 
 #### let
