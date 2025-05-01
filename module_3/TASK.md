@@ -30,8 +30,7 @@ console.log(textVar); // Logs: "This is a text"
 console.log(numericVar); // Logs: 132342
 
 // Vil fejle fordi `textVar` er erklæret med `const`
-textVar = "tried to overwrite"
-
+textVar = "tried to overwrite";
 ```
 
 #### let
@@ -99,7 +98,68 @@ console.log(result); // Logs: 7
 
 ## Lommeregner
 
+Nu skal vi prøve at sætte lidt af det vi har lært sammen til en lille web-app, nemlig en lille lommeregner.
+
 ![Lommeregner](../assets/lommeregner-basic.png)
+
+Start med at lave følgende filer i din `module_3`-mappe:
+
+- `index.html`
+- `calculator.js`
+
+index.html:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lommeregner</title>
+  </head>
+  <body>
+    <!-- Her skal vi skrive din HTML-kode -->
+    <script src="/calculator.js"></script>
+  </body>
+</html>
+```
+
+calculator.js:
+
+```javascript
+console.log("hello world");
+```
+
+Prøv at køre det i din terminal med kommandoen:
+
+```
+npx http-server module_3/solution -o -p 9999
+```
+
+og åben `http://127.0.0.1:9999/` i din browser. Siden er tom, men du skal kunne se "hello world" i konsollen.
+
+### Interaktion med knapper i HTML
+
+Tilføj en knap indeni `body` i din `index.html`-fil, som har et ID:
+
+```html
+<button id="knap-1">Knap 1</button>
+```
+
+Tilføj lidt javascript til `calculator.js` og se hvad der sker, når du klikker på "Knap 1".
+
+```javascript
+// Gem en reference til knappen i en variabel
+const myButton = document.getElementById("knap-1");
+
+// Lav en funktion til at håndtere hver gang der klikkes på knappen:
+function clickHandler() {
+  console.log("Der blev klikket på knappen!");
+}
+
+// Tilløj en "event listener" til din `myButton`, som lytter på "click"-events og kalder din `clickHandler`
+myButton.addEventListener("click", clickHandler);
+```
 
 ## Forslag til ekstraopgaver
 
