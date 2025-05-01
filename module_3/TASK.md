@@ -51,6 +51,21 @@ console.log(text2); // Logs: "A different text"
 
 number2 = 3000;
 console.log(number2); // Logs: 3000
+
+// Sæt to tekster (strings) sammen
+const anotherString = text2 + "noget andet tekst";
+```
+
+Man kan også skifte imellem typerne:
+
+```javascript
+// Fra number til string
+const aNumber = 42;
+const aString = "" + aNumber; // = "42"
+
+// Fra string til number
+const aString = "42";
+const aNumber = parseInt(aString); // = 42
 ```
 
 #### Basale typer
