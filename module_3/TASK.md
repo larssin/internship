@@ -161,7 +161,31 @@ function clickHandler() {
 myButton.addEventListener("click", clickHandler);
 ```
 
+### Interaktion med input i HTML
+
+Tilføj et input element indeni `body` i din `index.html`-fil, som har et ID:
+
+```html
+<input id="input-1" value="0" />
+```
+
+I `calculator.js` tilføjes:
+
+```javascript
+// Gem en reference til input-feltet i en variabel
+const myInput = document.getElementById("input-1");
+
+// Lav en funktion til at håndtere hver gang der sker ændringer i input-feltet
+function handleChanges(event) {
+  console.log(event.target.value);
+}
+
+// Tilløj en "event listener" til din `myInput` (kaldes kun når input forlades)
+myInput.addEventListener("change", handleChanges);
+```
+
 ## Forslag til ekstraopgaver
 
+- Lav en ny underside til hjemmesiden fra "module_1" og "module_2" med din lommeregner.
 - Lav et klassisk "num pad" med tallene 0 til 9 og brug dem til at indsætte værdier i inputfeltet.
 - tilføj en "minus"-knap, så lommeregneren kan trække tal fra.
