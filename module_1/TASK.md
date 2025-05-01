@@ -1,6 +1,6 @@
 # HTML og CSS
 
-![Layout](assets/layout.png "Layout")
+![Layout](../assets/layout.png "Layout")
 
 ##
 
