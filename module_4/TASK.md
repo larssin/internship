@@ -1,4 +1,4 @@
-# Star Wars
+# Et Star Wars API
 
 I dette modul skal vi lege lidt mere med Javascript. Vi skal lære lidt om asynkrone
 funktioner og kald af eksterne resourcer.
