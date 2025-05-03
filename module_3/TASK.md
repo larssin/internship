@@ -22,6 +22,8 @@ Den skulle gerne printe "Hello World!" 😀
 
 #### const
 
+Med `const` erklærer man variabler som IKKE kan overskrives.
+
 ```javascript
 const textVar = "This is a text";
 const numericVar = 132342;
@@ -34,6 +36,8 @@ textVar = "tried to overwrite";
 ```
 
 #### let
+
+Med `let` erklærer man variabler som KAN overskrives.
 
 ```javascript
 let text2 = "this is a text"; // Kan overskrives pga. "let"
