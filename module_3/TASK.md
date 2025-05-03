@@ -68,11 +68,67 @@ const aString = "42";
 const aNumber = parseInt(aString); // = 42
 ```
 
-#### Basale typer
+#### Lidt om typer
 
-`string`: er tekst og skrives som "dette er en tekst", 'dette er en tekst' eller \`dette er en tekst\`
+`string`: er tekst (eller tekststreng) og skrives som "dette er en tekst", 'dette er en tekst' eller \`dette er en tekst\`
 
 `number`: F.eks. 4399 eller -5.1
+
+`array`: er lister med indhold. Indholdet kan være af alle slags typer. Fx:
+
+```javascript
+const a = []; // tom liste med lægden 0
+const b = [3, 42]; // liste med tallene 3 og 42
+const c = ["en tekst", 21, []]; // en liste med en tekst, et tal og en liste.
+```
+
+##### Arrays
+
+Arrays er smarte til at samle andet indhold og bruges hele tiden i Javascript-programmering.
+
+Hvert element i et array har et indeks, således at der første element har indeks `0`, det næste har indeks `1` osv. Man kan tilgå et hvilket som helst element via dette indeks. Eksempel:
+
+```javascript
+const liste = [10, 20, 30];
+const a = liste[0]; // 10
+const b = liste[1]; // 20
+const c = liste[2]; // 30
+```
+
+Man kan ændre en værdi i array'et via et indeks:
+
+```javascript
+const liste = [10, 20, 30];
+liste[2] = 40; // nu indeholder `liste`: [10, 20, 40]
+```
+
+... eller tilføje og fjerne elementer:
+
+```javascript
+const colors = ["red"];
+
+// tilføj et element
+colors.push("blue"); // colors er nu: ["red", "blue"]
+
+// fjern et element
+colors.pop(); // colors er nu: ["red"] igen
+```
+
+Man kan også iterere (gennemløbe) et array:
+
+```javascript
+const liste = [10, 20, 30];
+
+// med en for-løkke (engelsk: for loop)
+for (let i = 0; i < liste.length; i++) {
+  console.log(liste[i]);
+}
+
+// eller fx med `forEach`-metoden:
+liste.forEach(function (item) {
+  console.log(item);
+});
+```
 
 ### Funktioner
 
