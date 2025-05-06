@@ -7,12 +7,14 @@ Opret en mappe ved navn `module_3` i dit projekt og opret en javascript-fil ved 
 `main.js` kan til at begynde med indeholde følgende kode:
 
 ```javascript
+// Printer en besked til loggen
 console.log("Hello World!");
 ```
 
 I en terminal kan du køre programmet med:
 
 ```
+// node {stien til filen}. Så hvis der ligger en fil med navn `main.js` i mappen `module_3`:
 node module_3/main.js
 ```
 
