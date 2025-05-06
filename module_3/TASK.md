@@ -76,7 +76,7 @@ const aNumber = parseInt(aString); // = 42
 
 #### Lidt om typer
 
-`string`: er tekst (eller tekststreng) og skrives som "dette er en tekst", 'dette er en tekst' eller \`dette er en tekst\`
+`string`: en tekst (streng). En streng indpakkes med `"` eller `'` . Fx: "dette er en tekst" eller 'dette er en tekst'
 
 `number`: F.eks. 4399 eller -5.1
 
