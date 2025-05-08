@@ -1,0 +1,37 @@
+body {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#calculator {
+  width: 152px;
+}
+
+#display {
+  width: 100%;
+  background-color: lightblue;
+  box-sizing: border-box;
+  border: 1px solid gray;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 8px;
+  padding: 4px 8px;
+}
+
+#numpad {
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
+  row-gap: 8px;
+  width: 152px;
+  flex-wrap: wrap;
+}
+
+button {
+  width: 32px;
+  height: 32px;
+  padding: 4px 0;
+  line-height: 24px;
+  font-size: 16px;
+}
