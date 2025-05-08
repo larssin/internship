@@ -15,7 +15,7 @@ En asynkron funktion...
 
 ## `fetch` funktionen
 
-Javascripts har en indbygget funktion kaldet `fetch`. Den kan kaldes med en URL og så returnerer den et svar kort tid efter. For eksempel:
+Javascript har en indbygget funktion kaldet `fetch`. Den kan kaldes med en URL og så returnerer den et svar kort tid efter. For eksempel:
 
 ```javascript
 fetch("https://swapi.py4e.com/api/starships/");
