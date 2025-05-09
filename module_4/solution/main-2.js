@@ -16,5 +16,5 @@ function handleResponse(response) {
   response.json().then(unwrapJson);
 }
 function load(type) {
-  fetch(`https://swapi.py4e.com/api/${type}/`).then(handleResponse);
+  fetch("https://swapi.py4e.com/api/" + type + "/").then(handleResponse);
 }
