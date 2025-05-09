@@ -3,6 +3,8 @@ const listRef = document.getElementById("list");
 function unwrapJson(data) {
   const listSize = data.results.length;
 
+  listRef.innerHTML = "";
+
   for (let i = 0; i < listSize; i++) {
     const elem = document.createElement("li");
     elem.innerText = data.results[i].name;
@@ -13,5 +15,6 @@ function unwrapJson(data) {
 function handleResponse(response) {
   response.json().then(unwrapJson);
 }
-
-fetch("https://swapi.py4e.com/api/people/").then(handleResponse);
+function load(type) {
+  fetch(`https://swapi.py4e.com/api/${type}/`).then(handleResponse);
+}

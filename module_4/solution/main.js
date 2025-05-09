@@ -1,33 +1,15 @@
-(function () {
-  console.log('Hello "Star Wars"');
-  main();
+const listRef = document.getElementById("list");
 
-  // mainSync();
-})();
+function handleFetchResponse(response) {
+  response.json().then(handleData);
+}
 
-const list = document.getElementById("list");
-
-// bruger `async`/`await`
-async function main() {
-  const response = await fetch("https://swapi.py4e.com/api/starships/");
-  const data = await response.json();
-
-  data.results.forEach((starship) => {
+function handleData(data) {
+  data.results.forEach(function (starship) {
     const listItem = document.createElement("li");
     listItem.textContent = starship.name;
-    list.appendChild(listItem);
+    listRef.appendChild(listItem);
   });
 }
 
-// Bruger `then` callback
-function main2() {
-  fetch("https://swapi.py4e.com/api/starships/").then((response) => {
-    response.json().then((data) => {
-      data.results.forEach((starship) => {
-        const listItem = document.createElement("li");
-        listItem.textContent = starship.name;
-        list.appendChild(listItem);
-      });
-    });
-  });
-}
+fetch("https://swapi.py4e.com/api/starships/").then(handleFetchResponse);
